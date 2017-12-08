@@ -4,8 +4,10 @@ var graphic = container.select('.scroll__graphic');
 var chart = graphic.select('.chart');
 var text = container.select('.scroll__text');
 var step = text.selectAll('.step');
+var riverData
 // initialize the scrollama
 var scroller = scrollama();
+var milestepratio = 2 // TODO come up wth a better ratio
 // generic window resize listener event
 function handleResize() {
   // 1. update height of step elements
@@ -50,20 +52,18 @@ function handleContainerExit(response) {
   graphic.classed('is-bottom', response.direction === 'down');
 }
 
-function loadJSON() {
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'sites.json', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            var data = JSON.parse(xobj.responseText);
-            console.log(data)
-            init();
-          }
-    };
-    xobj.send(null);
- }
+d3.json("/sites.json", function(data) {
+    console.log(data);
+    riverData = data
+    step = step.data(data.sites).enter()
+      .append("div")
+        .attr("class", (d) => "step")
+        .attr("data-step", (d,i) => i + "")
+        .attr("id", (d) => d.id)
+        .html((d) => {console.log(d);
+        return `<p> ${ d.description }</p>`})
+    init()
+});
 
 function init() {
   // 1. force a resize on load to ensure proper dimensions are sent to scrollama
@@ -85,4 +85,3 @@ function init() {
   window.addEventListener('resize', handleResize);
 }
 // kick things off
-loadJSON();

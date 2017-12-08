@@ -2,83 +2,83 @@
   "sites": [
       {
         "id": "35CS", 
-        "Description": "Central St. Bridge",
-        "Town": "Milford",
-        "RiverMile": 3.5
+        "description": "Central St. Bridge",
+        "town": "Milford",
+        "riverMile": 3.5
       },
       {
         "id": "59CS",
-        "Description": "Mellen St. Bridge",
-        "Town": "Bellingham/Milford/Hopedale",
-        "RiverMile": 5.9
+        "description": "Mellen St. Bridge",
+        "town": "Bellingham/Milford/Hopedale",
+        "riverMile": 5.9
       },
       {
         "id": "90CS",
-        "Description": "Rt. 126, N. Main St.",
-        "Town": "Bellingham",
-        "RiverMile": 9.0
+        "description": "Rt. 126, N. Main St.",
+        "town": "Bellingham",
+        "riverMile": 9.0
       },
       { "id" : "130S",
-        "Description": "Maple St. Bridge",
-        "Town": "Bellingham",
-        "RiverMile": 12.9
+        "description": "Maple St. Bridge",
+        "town": "Bellingham",
+        "riverMile": 12.9
       },
       { "id": "165S",
-        "Description": "Shaw St./Elm St. Bridge",
-        "Town": "Franklin/Medway",
-        "RiverMile": 16.5
+        "description": "Shaw St./Elm St. Bridge",
+        "town": "Franklin/Medway",
+        "riverMile": 16.5
       },
       { "id": "199S",
-        "Description": "Populatic Pond Boat Launch",
-        "Town": "Norfolk",
-        "RiverMile": 19.9
+        "description": "Populatic Pond Boat Launch",
+        "town": "Norfolk",
+        "riverMile": 19.9
       },
       { "id": "229S",
-        "Description": "Rt. 115, Baltimore St.",
-        "Town": "Millis",
-        "RiverMile": 22.9
+        "description": "Rt. 115, Baltimore St.",
+        "town": "Millis",
+        "riverMile": 22.9
       },
       {"id": "267S",
-        "Description": "Dwight St. Bridge",
-        "Town": "Millis/Medfield",
-        "RiverMile": 26.7
+        "description": "Dwight St. Bridge",
+        "town": "Millis/Medfield",
+        "riverMile": 26.7
       },
       { "id": "269T",
-        "Description": "Causeway St./Stop River",
-        "Town": "Medfield",
-        "RiverMile": 26.9
+        "description": "Causeway St./Stop River",
+        "town": "Medfield",
+        "riverMile": 26.9
       },
       {
         "id": "290S",
-        "Description": "West St./Dover Rd.",
-        "Town": "Millis/Medfield",
-        "RiverMile": 29.0
+        "description": "West St./Dover Rd.",
+        "town": "Millis/Medfield",
+        "riverMile": 29.0
       },
       {
         "id":"318S",
-        "Description": "Rt. 27 Bridge",
-        "Town": "Medfield/Sherborn",
-        "RiverMile": 31.8
+        "description": "Rt. 27 Bridge",
+        "town": "Medfield/Sherborn",
+        "riverMile": 31.8
       },
       {"id": "343S",
-        "Description": "Farm Rd./Bridge St.",
-        "Town": "Sherborn/Dover",
-        "RiverMile": 34.3
+        "description": "Farm Rd./Bridge St.",
+        "town": "Sherborn/Dover",
+        "riverMile": 34.3
       },
       {"id": "387S",
-        "Description": "Elm Bank/Cheny Dr. Bridge",
-        "Town": "Wellesley/Dover",
-        "RiverMile": 37.8
+        "description": "Elm Bank/Cheny Dr. Bridge",
+        "town": "Wellesley/Dover",
+        "riverMile": 37.8
       },
       {"id":"400S", 
-        "Description": "Charles River Road Bridge",
-        "Town": "Dover/Needham",
-        "RiverMile": 40.0
+        "description": "Charles River Road Bridge",
+        "town": "Dover/Needham",
+        "riverMile": 40.0
       },
       {"id":"447S", 
-        "Description": "Dover Gage, Mill St.",
-        "Town": "Dover/Needham",
-        "RiverMile": 44.7
+        "description": "Dover Gage, Mill St.",
+        "town": "Dover/Needham",
+        "riverMile": 44.7
       }
   ]
 }
