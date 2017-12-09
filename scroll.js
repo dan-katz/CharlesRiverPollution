@@ -12,7 +12,7 @@ var milestepratio = 2 // TODO come up wth a better ratio
 function handleResize() {
   // 1. update height of step elements
   var stepHeight = Math.floor(window.innerHeight * 0.75);
-  step.style('height', stepHeight + 'px');
+  // step.style('height', stepHeight + 'px');
   // 2. update width/height of graphic element
   var bodyWidth = d3.select('body').node().offsetWidth;
   graphic
@@ -52,6 +52,11 @@ function handleContainerExit(response) {
   graphic.classed('is-bottom', response.direction === 'down');
 }
 
+function getRiverHeight(riverlength) {
+  const scale = 0.2
+  return Math.floor(window.innerHeight * scale * riverlength);
+}
+
 d3.json("/sites.json", function(data) {
     console.log(data);
     riverData = data
@@ -60,8 +65,9 @@ d3.json("/sites.json", function(data) {
         .attr("class", (d) => "step")
         .attr("data-step", (d,i) => i + "")
         .attr("id", (d) => d.id)
+        .style("height", (d) => getRiverHeight(d.distance) + "px")
         .html((d) => {console.log(d);
-        return `<p> ${ d.description }</p>`})
+        return `<p class="river-cell"> ${ d.description }</p>`})
     init()
 });
 
