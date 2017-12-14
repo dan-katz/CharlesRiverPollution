@@ -58,7 +58,7 @@ function getRiverHeight(riverlength) {
   return Math.floor(window.innerHeight * scale * riverlength);
 }
 
-d3.json("/sites.json", function(data) {
+d3.json("https://dan-katz.github.io/CharlesRiverPollution/sites.json", function(data) {
     console.log(data);
     riverData = data
     step = step.data(data.sites).enter()

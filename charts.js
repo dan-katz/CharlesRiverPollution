@@ -2,13 +2,13 @@ let gradeData;
 let siteData;
 let ecoliChart;
 let perSwimBoatChart;
-d3.json("/river.json", function(data) {
+d3.json("https://dan-katz.github.io/CharlesRiverPollution/river.json", function(data) {
   gradeData = data
   drawGradeChart();
   drawPerSwimBoatChart();
 });
 
-d3.json("/sites.json", function(data) {
+d3.json("https://dan-katz.github.io/CharlesRiverPollution/sites.json", function(data) {
   siteData = data
   drawEcoliChart();
 });
