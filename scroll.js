@@ -29,7 +29,6 @@ function handleResize() {
 }
 // scrollama event handlers
 function handleStepEnter(response) {
-  console.log('sup bih');
   // response = { element, direction, index }
   // add color to current step only
   step.classed('is-active', function (d, i) {
@@ -37,7 +36,6 @@ function handleStepEnter(response) {
   })
   // update graphic based on step
   chart.select('p').text(response.index + 1)
-  console.log(riverData.sites[response.index]);
   redrawEcoliChart(riverData.sites[response.index]);
 }
 
