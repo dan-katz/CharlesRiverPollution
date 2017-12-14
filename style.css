@@ -1,6 +1,8 @@
 .river-cell {
   width: 100%;
   height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .intro-text {

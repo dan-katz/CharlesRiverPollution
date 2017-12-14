@@ -94,31 +94,31 @@ function drawPerSwimBoatChart() {
     },
     options: {
       responsive: true,
-    title:{
-      display: true,
-      text: 'Sites Meeting Swim and Boat Standards'
-    },
-    legend: {
-      display: false
-    },
-    scales: {
-      xAxes: [{
+      title:{
         display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Year'
-        }
-      }],
-      yAxes: [{
-        position: 'left',
+        text: 'Sites Meeting Swim and Boat Standards'
+      },
+      legend: {
         display: true,
-        scaleLabel: {
+      },
+      scales: {
+        xAxes: [{
           display: true,
-          labelString: 'Percent'
-        },
-      }]
+          scaleLabel: {
+            display: true,
+            labelString: 'Year'
+          }
+        }],
+        yAxes: [{
+          position: 'left',
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Percent'
+          },
+        }]
+      }
     }
-  }
   });
 };
 
@@ -159,7 +159,39 @@ function drawEcoliChart() {
           labelString: 'Concentration'
         },
       }]
-    }
+    },
+      annotation: {
+        annotations: [
+          {
+            type: 'line',
+            mode: 'horizontal',
+            scaleID: 'y-axis-0',
+            value: '630',
+            borderColor: '#00ff00',
+            borderWidth: 1,
+            label: {
+              content: 'Boat Standard',
+              enabled: true,
+              position: 'left',
+            }
+          },
+          {
+            type: 'line',
+            mode: 'horizontal',
+            scaleID: 'y-axis-0',
+            value: '126',
+            borderColor: '#0000ff',
+            borderWidth: 1,
+            label: {
+              content: 'Swim Standard',
+              enabled: true,
+              position: 'left',
+            }
+          },
+
+        ],
+        drawTime: "afterDraw" // (default)
+      }
   }
   });
 };
