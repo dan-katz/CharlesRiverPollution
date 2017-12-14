@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Scrollama Demo: Fixed CSS</title>
+	<title>Visualzing Charles River Pollution</title>
 	<meta name="description" content="Scrollama Demo: Fixed CSS">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="scroll.css" />
@@ -14,18 +14,33 @@
 <body>
 	<section id='intro'>
 		<p class='intro__overline'>
-			<a href='https://github.com/russellgoldenberg/scrollama'>scrollama.js</a>
+      Made by Dan Katz and Jack O'Shea
 		</p>
-		<h1 class='intro__hed'>Demo: Sticky Graphic</h1>
-		<p class='intro__dek'>
-			Start scrolling to see how it works.
-		</p>
+		<h1 class='intro__hed'>Visualizing Charles River Pollution</h1>
+    <p class='intro_text'>
+      The Charles River runs 80 miles from Hopkinton, Massachusetts to the New Charles River Dam, where it flows into Boston Harbor. The stretch of river from Watertown to Boston Harbor, known as the
+Lower Basin of the Charles, is a well-known Boston landmark, widely recognized for its recreational
+and aesthetic value to the communities that surround it.
+    </p><br/>
+    <p class='intro_text'>
+      Though the Charles River is a relatively small river, with a watershed encompassing 308 square miles and parts of 35 cities and towns, it is home to approximately one million people, making it one of the most densely populated watersheds in New England. The River itself meanders through 23 communities with diverse character, from the more rural upper watershed in Hopkinton and Milford, to the urban lower watershed communities of Boston and Cambridge.
+    </p><br/>
+    <p class='intro-text'>
+      Today, the River is home to many species of fish, including the bluegill, redfin pickerel, American eel, river herring, redbreast sunfish, and largemouth bass. The Charles bustles with sailboats, rowboats, and wind surfers. Both the abundant wildlife of the River and its recreational utility depend upon the delicate state of its biological, chemical, and physical attributes.
+    </p>
+  </p>
+  <br/>
+	<div>
+		<canvas id="gradeChart" width="400" height="400"></canvas>
+		<canvas id="perSwimBoatChart" width="400" height="400"></canvas>
+	</div>
 	</section>
 	<section id='scroll'>
-		<div class='scroll__graphic'>
-			<div class='chart'>
-				<p>0</p>
-			</div>
+		<div class='scroll__graphic sticky'>
+      <div class="chart" style="width: 531px; height: 438px;">
+        <canvas id="ecoliChart"></canvas>
+      </div>
+
 		</div>
 		<div class='scroll__text'>
 		</div>
@@ -36,6 +51,9 @@
 	<script src='https://d3js.org/d3.v4.min.js'></script>
 	<script src='https://unpkg.com/scrollama'></script>
 	<script src='scroll.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js'></script>
+	<script src='charts.js'></script>
+
 </body>
 
 </html>

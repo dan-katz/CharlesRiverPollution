@@ -29,6 +29,7 @@ function handleResize() {
 }
 // scrollama event handlers
 function handleStepEnter(response) {
+  console.log('sup bih');
   // response = { element, direction, index }
   // add color to current step only
   step.classed('is-active', function (d, i) {
@@ -36,6 +37,8 @@ function handleStepEnter(response) {
   })
   // update graphic based on step
   chart.select('p').text(response.index + 1)
+  console.log(riverData.sites[response.index]);
+  redrawEcoliChart(riverData.sites[response.index]);
 }
 
 function handleContainerEnter(response) {
@@ -66,8 +69,7 @@ d3.json("/sites.json", function(data) {
         .attr("data-step", (d,i) => i + "")
         .attr("id", (d) => d.id)
         .style("height", (d) => getRiverHeight(d.distance) + "px")
-        .html((d) => {console.log(d);
-        return `<p class="river-cell"> ${ d.description }</p>`})
+        .html((d) => `<p class="river-cell"> ${ d.description }</p>`)
     init()
 });
 
@@ -82,7 +84,7 @@ function init() {
     graphic: '.scroll__graphic',
     text: '.scroll__text',
     step: '.scroll__text .step',
-    debug: true,
+    debug: false,
   })
     .onStepEnter(handleStepEnter)
     .onContainerEnter(handleContainerEnter)

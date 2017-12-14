@@ -32,7 +32,7 @@ a:hover {
 #intro {
   max-width: 40rem;
   margin: 1rem auto;
-  text-align: center;
+  text-align: justify;
 }
 .intro__overline {
   font-size: 1.4rem;
@@ -59,6 +59,7 @@ a:hover {
   position: relative;
   border-top: 1px dashed #000;
   border-bottom: 1px dashed #000;
+  display: flex;
 }
 .scroll__graphic {
   position: absolute;
@@ -84,8 +85,6 @@ a:hover {
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-color: #ddd;
-  border: 1px solid #000;
 }
 .chart p {
   text-align: center;
