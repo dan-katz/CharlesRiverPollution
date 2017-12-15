@@ -54,11 +54,25 @@ function handleContainerExit(response) {
 }
 
 function getRiverHeight(riverlength) {
-  const scale = 0.2
-  return Math.floor(window.innerHeight * scale * riverlength);
+  const scale = 0.2;
+  return Math.max(
+          Math.floor(window.innerHeight * scale * riverlength),
+          window.innerHeight / 2.5);
 }
 
-d3.json("https://dan-katz.github.io/CharlesRiverPollution/sites.json", function(data) {
+function ecoliToColor(ecoli) {
+  if (ecoli <= 126) {
+    return "DodgerBlue";
+  } else if (ecoli <= 630) {
+    return "#ffFF99";
+  } else if (ecoli > 630){
+    return "OrangeRed";
+  } else
+    return "gray";
+
+}
+
+d3.json("sites.json", function(data) {
     console.log(data);
     riverData = data
     step = step.data(data.sites).enter()
@@ -67,6 +81,7 @@ d3.json("https://dan-katz.github.io/CharlesRiverPollution/sites.json", function(
         .attr("data-step", (d,i) => i + "")
         .attr("id", (d) => d.id)
         .style("height", (d) => getRiverHeight(d.distance) + "px")
+        .style("border-left", (d) => "8px solid " + ecoliToColor(d.latestEcoli))
     .html((d) => `<p>Site ID: ${d.id}</p><p>Site description: ${ d.description }</p><p>Site location: ${d.town}</p><p>River mile: ${d.riverMile}</p>`)
     init()
 });

@@ -21,6 +21,7 @@ h4,
 a {
   margin: 0;
   font-weight: 300;
+  line-break: loose;
 }
 a,
 a:visited,
