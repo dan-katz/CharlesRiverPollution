@@ -25,7 +25,9 @@ function drawGradeChart() {
       yLabels: ['A+', 'A', 'A-', 'B++', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D'],
       datasets: [{
         fill: false,
-            data: gradeArr
+        data: gradeArr,
+        borderColor: 'BlueViolet',
+        backgroundColor: 'BlueViolet',
         }]
     },
     options: {
@@ -86,8 +88,8 @@ function drawPerSwimBoatChart() {
         {
           fill: false,
           label: 'Boat Standard',
-          backgroundColor: '#ffFF99',
-          borderColor: '#ffFF99',
+          backgroundColor: '#e59400',
+          borderColor: '#e59400',
           data: boatArr
         }
       ]
@@ -167,8 +169,8 @@ function drawEcoliChart() {
             mode: 'horizontal',
             scaleID: 'y-axis-0',
             value: '630',
-            borderColor: '#ffFF99',
-            borderWidth: 3,
+            borderColor: '#e59400',
+            borderWidth: 2,
             label: {
               content: 'Boat Standard',
               enabled: true,
@@ -181,7 +183,7 @@ function drawEcoliChart() {
             scaleID: 'y-axis-0',
             value: '126',
             borderColor: 'DodgerBlue',
-            borderWidth: 3,
+            borderWidth: 2,
             label: {
               content: 'Swim Standard',
               enabled: true,

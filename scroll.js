@@ -64,7 +64,7 @@ function ecoliToColor(ecoli) {
   if (ecoli <= 126) {
     return "DodgerBlue";
   } else if (ecoli <= 630) {
-    return "#ffFF99";
+    return "#e59400";
   } else if (ecoli > 630){
     return "OrangeRed";
   } else
