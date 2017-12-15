@@ -82,7 +82,8 @@ d3.json("sites.json", function(data) {
         .attr("id", (d) => d.id)
         .style("height", (d) => getRiverHeight(d.distance) + "px")
         .style("border-left", (d) => "8px solid " + ecoliToColor(d.latestEcoli))
-    .html((d) => `<div class="middle-dash mile-marker"> ${d.riverMile} mi</div>
+    .html((d, i) => (i==0 ? `<div id="mile-label" class="mile-marker">River Mile Marker</div>` : "") +
+                 `<div class="middle-dash mile-marker"> ${d.riverMile} mi</div>
                   <p>Site ID: ${d.id}</p>
                   <p>Site description: ${ d.description }</p>
                   <p>Site location: ${d.town}</p>

@@ -123,5 +123,5 @@ a:hover {
 .step.is-active p{
  /* background-color: lightgoldenrodyellow;*/
   color: black;
-  font-weight: bold;
+  font-weight: 500;
 }

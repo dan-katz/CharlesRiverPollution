@@ -20,6 +20,11 @@
   transition: color .25s;
 }
 
+#mile-label {
+  transform: translate(.5em, -2em);
+  height: 1em;
+}
+
 .is-active .mile-marker{
   color: black;
 }
