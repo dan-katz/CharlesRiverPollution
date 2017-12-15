@@ -77,17 +77,17 @@ function drawPerSwimBoatChart() {
       xLabels: ["1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
       datasets: [
         {
-            fill: false,
+          fill: false,
           label: 'Swim Standard',
-          backgroundColor: '#0000ff',
-          borderColor: '#0000ff',
-            data: swimArr
+          backgroundColor: '#1e90ff',
+          borderColor: 'DodgerBlue',
+          data: swimArr
         },
         {
           fill: false,
           label: 'Boat Standard',
-          backgroundColor: '#00ff00',
-          borderColor: '#00ff00',
+          backgroundColor: '#ffFF99',
+          borderColor: '#ffFF99',
           data: boatArr
         }
       ]
@@ -167,8 +167,8 @@ function drawEcoliChart() {
             mode: 'horizontal',
             scaleID: 'y-axis-0',
             value: '630',
-            borderColor: '#00ff00',
-            borderWidth: 1,
+            borderColor: '#ffFF99',
+            borderWidth: 3,
             label: {
               content: 'Boat Standard',
               enabled: true,
@@ -180,8 +180,8 @@ function drawEcoliChart() {
             mode: 'horizontal',
             scaleID: 'y-axis-0',
             value: '126',
-            borderColor: '#0000ff',
-            borderWidth: 1,
+            borderColor: 'DodgerBlue',
+            borderWidth: 3,
             label: {
               content: 'Swim Standard',
               enabled: true,
