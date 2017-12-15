@@ -156,7 +156,7 @@ function drawEcoliChart() {
         display: true,
         scaleLabel: {
           display: true,
-          labelString: 'Concentration'
+          labelString: 'Concentration (MPN/100mL)'
         },
       }]
     },

@@ -67,7 +67,7 @@ d3.json("https://dan-katz.github.io/CharlesRiverPollution/sites.json", function(
         .attr("data-step", (d,i) => i + "")
         .attr("id", (d) => d.id)
         .style("height", (d) => getRiverHeight(d.distance) + "px")
-    .html((d) => `<div class="river-cell"><p>Site ID: ${d.id}</p><p>Site description: ${ d.description }</p><p>Site location: ${d.town}</p><p>River mile: ${d.riverMile}</p></div>`)
+    .html((d) => `<p>Site ID: ${d.id}</p><p>Site description: ${ d.description }</p><p>Site location: ${d.town}</p><p>River mile: ${d.riverMile}</p>`)
     init()
 });
 

@@ -106,13 +106,20 @@ a:hover {
   width: 33%;
 }
 .step {
-  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.step.is-active {
-  background-color: lightgoldenrodyellow;
-}
-.step p {
+.step p{
   text-align: center;
   padding: 1rem;
   font-size: 1.5rem;
+  color: #d3d3d3;
+  font-weight: normal;
+}
+.step.is-active p{
+ /* background-color: lightgoldenrodyellow;*/
+  color: black;
+  font-weight: bold;
 }
