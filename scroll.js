@@ -61,14 +61,15 @@ function getRiverHeight(riverlength) {
 }
 
 function ecoliToColor(ecoli) {
-  if (ecoli <= 126) {
+  if (!ecoli) {
+    return "gray";
+  } else if (ecoli <= 126) {
     return "DodgerBlue";
   } else if (ecoli <= 630) {
     return "#e59400";
-  } else if (ecoli > 630){
+  } else {
     return "OrangeRed";
-  } else
-    return "gray";
+  }
 
 }
 
