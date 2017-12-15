@@ -5,6 +5,25 @@
   margin-bottom: 0;
 }
 
+.middle-dash {
+  height: 100%;
+  border-left: 2px dashed lightgray;
+  transform: translate(50%, 0%);
+}
+
+.mile-marker {
+  vertical-align: baseline;
+  font-family: monospace;
+  color: lightgray;
+  font-size: 1.2em;
+  padding: 5px;
+  transition: color .25s;
+}
+
+.is-active .mile-marker{
+  color: black;
+}
+
 .intro-text {
   text-align: justify
 }
