@@ -26,8 +26,8 @@ function drawGradeChart() {
       datasets: [{
         fill: false,
         data: gradeArr,
-        borderColor: 'BlueViolet',
-        backgroundColor: 'BlueViolet',
+        borderColor: '#8a2be2',
+        backgroundColor: '#8a2be2',
         }]
     },
     options: {
@@ -140,7 +140,7 @@ function drawEcoliChart() {
       responsive: true,
     title:{
       display: true,
-      text: 'Ecoli Data '
+      text: `Avg E. coli concentration for ${siteData.sites[0].description}`
     },
     legend: {
       display: false
@@ -200,6 +200,6 @@ function drawEcoliChart() {
 
 function redrawEcoliChart(site) {
   ecoliChart.data.datasets[0].data = site.ecoliData;
-  ecoliChart.options.title.text = `Avg E.coli concentration for ${site.description}`
+  ecoliChart.options.title.text = `Avg E. coli concentration for ${site.description}`
   ecoliChart.update();
 }
